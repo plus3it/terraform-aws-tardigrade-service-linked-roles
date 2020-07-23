@@ -6,10 +6,6 @@ update_configs:
     directory: "/"
     update_schedule: "daily"
 
-  - package_manager: "go:modules"
-    directory: "/tests"
-    update_schedule: "daily"
-
   - package_manager: "docker"
     directory: "/"
     update_schedule: "daily"

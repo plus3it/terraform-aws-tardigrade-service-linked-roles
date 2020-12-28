@@ -1,4 +1,4 @@
-variable aws_service_names {
+variable "aws_service_names" {
   description = "List of AWS Service Names for which service-linked roles will be created"
   type        = list(string)
   # This list is gathered manually using this link:
@@ -71,7 +71,7 @@ variable aws_service_names {
   ]
 }
 
-variable excluded_aws_service_names {
+variable "excluded_aws_service_names" {
   description = "List of AWS Service Names for which service-linked roles will *NOT* be created"
   type        = list(string)
   default = [

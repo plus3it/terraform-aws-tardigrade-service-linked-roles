@@ -1,3 +1,3 @@
-module service_linked_roles {
+module "service_linked_roles" {
   source = "../../"
 }

@@ -1,4 +1,4 @@
-resource aws_iam_service_linked_role this {
+resource "aws_iam_service_linked_role" "this" {
   for_each = toset(local.aws_service_names)
 
   aws_service_name = each.value

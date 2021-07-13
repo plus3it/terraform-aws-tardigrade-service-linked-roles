@@ -1,19 +1,15 @@
 dist: bionic
 
-language: node_js
-
-node_js:
-  - "12"
-
 stages:
   - lint
+  - test
   - deploy
 
 jobs:
   include:
     - stage: lint
       name: Project Syntax Verification
-      script: make && make docker/run target=lint
+      script: make docker/run target=lint
     - stage: deploy
       if: branch = master AND type = push AND repo = plus3it/terraform-aws-tardigrade-service-linked-roles
       before_script:

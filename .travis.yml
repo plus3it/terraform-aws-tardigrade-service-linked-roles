@@ -25,7 +25,6 @@ jobs:
     - stage: test
       name: Apply Terraform test configs in mockstack
       install:
-        - make docker-compose/install
         - make mockstack/up
       script: make mockstack/pytest
       after_script:
